@@ -1,0 +1,25 @@
+/* 1.decendant combinator */
+ul ol{
+    color: red;
+}
+article strong{
+    color: violet;
+}
+/* 2. child combinator */
+/* parent>Childname */
+/* body>P body  child whose name is p */
+body>p {
+    color: blue;
+}
+/* 3. Next sibling */
+ul + a{
+    color: orange;
+}
+h2+p{
+    color: burlywood;
+}
+/* 4. Subsequent siblings */
+h1~h2{
+    color: yellowgreen;
+}
+
