@@ -1,30 +1,28 @@
 #include <stdio.h>
 int main()
 {
-    int arr[100];
-    int n;
-    scanf("%d",&n);
+    int size;
+    scanf("%d",&size);
+    int arr[size];
+      for(int i = 0; i < size; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    
+    int start = 0;
+    int end = size - 1;
 
-    int i = 0, j = n-1;
-    for(int i = 0; i < n; i++)
+    while(start < end)
     {
-        scanf("%d",arr[i]);
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+
+        start++;
+        end--;
     }
-     for(int i = 0; i < n; i++)
+    for(int i = 0; i<size; i++)
     {
-        printf("%d",arr[i]);
-    }
-    while (i != j)
-    {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        i++;
-        j--;
-    }
-    printf("\nAfter reverse\n");
-    for(int i = 0; i < n; i++)
-    {
-        printf("%d",arr[i]);
+        printf("%d\t",arr[i]);
     }
 }
