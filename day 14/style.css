@@ -1,0 +1,30 @@
+h1::before{
+    content: "Pseudo ";
+    color: aqua;
+
+}
+
+h1::after{
+    content: " Selector";
+    color: aqua;
+}
+
+li:first-child{
+    color: red;
+}
+
+li:last-child{
+    color: indigo;
+}
+
+/* li:nth-of-type(odd){
+    color: blueviolet;
+} */
+
+/* #sec li:nth-of-type(even){
+                     color: brown;
+} */
+
+#sec li:nth-of-type(4n+1){
+    color: chartreuse;
+}
